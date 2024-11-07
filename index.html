@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻宝游戏</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+       .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+       .prompt {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">解谜游戏</div>
+    <div id="output" class="prompt" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+    <div id="searching" class="prompt" style="position: fixed; top: 10px; right: 10px;"></div>
+    <div id="buttons-container">
+        <button id="bed">床</button>
+        <button id="desk">书桌</button>
+        <button id="wardrobe">衣柜</button>
+        <button id="guitar">吉他</button>
+    </div>
+    <div id="decoding" class="prompt">正在解码...</div>
+    <img id="image-display" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div id="fail-popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; border-radius: 10px;">
+        糟糕！时间到了，还没找到小明，看来只能请他吃辣条了。
+        <button id="restart-button">重新开始</button>
+    </div>
+
+    <script src="treasure.js"></script>
+</body>
+
+</html>
